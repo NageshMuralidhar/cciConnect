@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<head>
+  <title>Home Page</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <!-- Fonts CDN -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" />
+
+  <!-- local css files -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/master.css" />
+</head>
+
+<body>
+  <% include partials/header.ejs %> <% include partials/nav.ejs %>
+
+  <!-- Main body component -->
+  <main class="body-content-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3"></div>
+
+        <div class="col-lg-6">
+          <div class="jumbotron">
+            <h1 class="display-4">Contact Us!</h1>
+            <p class="lead">
+              The complete website was created by Nagesh Bangalore Muralidhar
+            </p>
+            <hr class="my-4" />
+            <p>
+              Contact Details are as follows:
+            </p>
+            <p>
+              <u>Phone: +1 1234 567 890</u>
+            </p>
+            <p>
+              <u>Email: emailnageshbm@gmail.com</u>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3"></div>
+      </div>
+    </div>
+  </main>
+  <!-- Main body component end -->
+
+  <% include partials/footer.ejs %>
+</body>
+
+</html>

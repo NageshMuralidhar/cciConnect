@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<head>
+  <title>Home Page</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <!-- Fonts CDN -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <!-- local css files -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/master.css" />
+</head>
+
+<body class="connection">
+  <% include partials/signedInNav.ejs %> <% include partials/nav.ejs %>
+  <span class="tutorial">
+    <i class="fas fa-gamepad"></i>
+    <span class="tut-text">
+      TUTORIAL
+    </span>
+  </span>
+  <!-- Main body component -->
+  <main class="body-content-wrapper connection-engine">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="host-wrapper commoner">
+            <h1 class="display-4">
+              <%=connection[0].cName%>
+            </h1>
+            <div class="media">
+              <img src="../assets/img/user.png" class="mr-3" alt="User Image" />
+              <div class="media-body">
+                <h5 class="mt-0">Host: <%=connection[0].chost%></h5>
+                <p class="data-wrapper">
+                  Date: <%=connection[0].cdate%>
+                </p>
+                <p class="time-wrapper">
+                  Time: <%=connection[0].ctime%>
+                </p>
+                <p class="location-wrapper">
+                  Location: <%=connection[0].clocation%>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="host-description-wrapper commoner">
+            <h1 class="display-4">Details</h1>
+            <p>
+              <%=connection[0].cdescription%>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="rsvp-preferance-wrapper">
+            <div class="card commoner">
+              <div class="card-header">
+                RSVP Preferences
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">3 people are going to this event.</h5>
+                <p class="card-text">
+                  Let others know if you can make it.
+                </p>
+                <form>
+                  <a href="savedConnections.ejs?rsvp=Yes" class="btn btn-success">Yes</a>
+                  <a href="savedConnections.ejs?rsvp=No" class="btn btn-danger">No</a>
+                  <a href="savedConnections.ejs?rsvp=Maybe" class="btn btn-primary">Maybe</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Main body component end -->
+
+  <%include partials/footer.ejs %>
+</body>
+
+</html>
+<script>
+  $('.tutorial').on('click', function () {
+    $('.tutorial').addClass('stop')
+    $('.rsvp-preferance-wrapper form').append('<span class = "tutorial-5"><i class="far fa-hand-point-left"></i>Select yout option to RSVP to an event<button id="exit" class="btn btn-sm btn-dark">Exit</button></span>')
+    $('#exit').on('click', function () {
+      $('.tutorial-5').remove()
+      $('.study-wrapper ul').removeClass('tutorial-ul')
+      $('.tutorial').removeClass('stop')
+    })
+  })
+</script>

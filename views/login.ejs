@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<head>
+    <title>Home Page</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <!-- Fonts CDN -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" />
+
+    <!-- local css files -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/master.css" />
+</head>
+
+<body class="login">
+    <% include partials/newHeader.ejs %> <% include partials/loginNav.ejs %>
+
+    <!-- Main body component -->
+    <main class="body-content-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <div class="jumbotronn">
+                        <form method="POST" action="/login">
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input name="password" type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block">
+                                Login
+                            </button>
+                        </form>
+                    </div>
+                    <%if(msg != ''){%>
+                    <div class="alert alert-danger" role="alert">
+                        <%=msg%>
+                    </div>
+                    <%}%>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+        </div>
+    </main>
+    <!-- Main body component end -->
+
+    <% include partials/footer.ejs %>
+</body>
+
+</html>

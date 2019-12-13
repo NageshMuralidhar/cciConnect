@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html lang="en">
+
+<head>
+  <title>Home Page</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <!-- Fonts CDN -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" />
+
+  <!-- local css files -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/master.css" />
+</head>
+
+<body>
+  <% include partials/header.ejs %> <% include partials/nav.ejs %>
+
+  <!-- Main body component -->
+  <main class="body-content-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3"></div>
+
+        <div class="col-lg-6">
+          <div class="jumbotron">
+            <h1 class="display-4">About</h1>
+            <p class="lead">
+              This website is a complete module of NBAD assignment which
+              performs CCI connections for people to connect.
+            </p>
+            <hr class="my-4" />
+            <p>
+              The idea behind this website is to provide a simple approach for
+              people who want to do a pirticular task together.
+            </p>
+            <hr class="my-4" />
+            <p>
+              The website will be access after signing in and the various
+              connections can be viewed by clicking on the links.
+            </p>
+            <hr class="my-4" />
+            <p>
+              You can also edit, add, update, delete a pirticular connection
+              based on the user needs.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3"></div>
+      </div>
+    </div>
+  </main>
+  <!-- Main body component end -->
+
+  <% include partials/footer.ejs %>
+</body>
+
+</html>

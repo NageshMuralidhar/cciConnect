@@ -1,0 +1,916 @@
+/*navbar styling*/
+.dater {
+  position: relative;
+}
+.table {
+  text-align: center;
+}
+.error {
+  /* box-shadow: 0 0 5px 1px #ff0000; */
+  border: 4px solid #ff0000;
+  transition: 0.5s ease-in-out 0s all;
+}
+.alert.alert-danger {
+	margin-top: 50px;
+}
+.register-form .form-group {
+	float: left;
+	margin: 0px 0 30px 0;
+	width: 50%;
+	padding: 0 10px;
+}
+.rsvp-preferance-wrapper .card {
+	width: 100%;
+	text-align: center;
+	box-shadow: 0 0 4px 0px #333;
+  border: 2px solid #000000;
+  flex-direction: row;
+}
+.connection .btn {
+	width: 100%;
+	margin: 10px 0;
+}
+.commoner {
+	min-height: 420px;
+	border-radius: 5px;
+	border: 5px solid #af0000!important;
+}
+.host-wrapper .display-4 {
+	border-bottom: 1px solid #ccc;
+	padding: 8px 0 12px 0;
+}
+.media-body h5, .media-body p {
+	margin: 0;
+	border-bottom: 1px solid #efefef;
+	padding: 10px 0;
+}
+.rsvp-preferance-wrapper form {
+	background: #333 !important;
+}
+body.bodyerror {
+  background: #ff0000;
+}
+form.register-form.error {
+  border: 10px solid #333;
+  background: #000;
+  color: #fff;
+}
+.table-wrapper.table-responsive {
+	border: 1px solid #000;
+	border-radius: 5px;
+  box-shadow: 0 0 11px 0 #000;
+  border: 2px solid #000;
+  overflow: auto;
+}
+.saved-con .btn.btn-light:hover {
+	background: green;
+	color: #fff;
+}
+.saved-con .btn.btn-secondary:hover {
+	background: #cf0000;
+	color: #fff;
+}
+main.body-content-wrapper form {
+	background: #efefef;
+	padding: 30px 30px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px 2px #000;
+  border: 5px solid #fff;
+  position: relative;
+}
+.hide {
+  display: none;
+}
+.custom-logo {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 #333;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  transition: 0.15s ease-in-out all 0s;
+}
+.brand-wrapper:hover img {
+  transition: 0.15s ease-in-out all 0s;
+  width: 60px;
+  left: 5px;
+  top: 5px;
+}
+.navigation-engine ul li {
+  display: inline-block;
+}
+.navigation-engine ul li a {
+  transition: 0.15s ease-in-out all 0s;
+  transition: 0.15s ease-in-out all 0s;
+  color: #fca601;
+}
+.navigation-engine ul li:hover a {
+  transition: 0.15s ease-in-out all 0s;
+  color: #fff;
+  text-decoration: none;
+}
+.navigation-engine ul li:first-child {
+  width: 170px;
+  text-align: center;
+}
+.navigation-engine ul li:nth-child(2),
+.navigation-engine ul li:nth-child(3) {
+  width: 70px;
+  text-align: center;
+}
+.user-signed-in ul li:nth-child(2) {
+  width: 110px;
+  text-align: center;
+}
+.user-signed-in ul li:nth-child(3) {
+  width: 70px;
+  text-align: center;
+}
+.brand-wrapper {
+  width: 50px;
+  position: relative;
+  height: 50px;
+}
+.navbar.navbar-dark.bg-dark.sticky-top {
+  padding: 0 10px;
+  height: 50px;
+  line-height: 50px;
+  z-index: 2;
+  position: relative;
+}
+.display-4 + div {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 100%;
+	display: inline-block;
+	overflow: hidden;
+}
+.usercontent {
+	position: absolute;
+	color: #fff;
+	font-weight: bold;
+	width: calc(100% - 100px);
+	text-align: center;
+	top: 0px;
+	left: 0;
+	z-index: -1;
+}
+.view-connections {
+  background: #333;
+  padding: 10px;
+  border: 3px solid #333;
+  text-align: right;
+  position: relative;
+}
+.view-connections a {
+  color: #34a853;
+  transition: 0.15s ease-in-out all 0s;
+}
+.view-connections a:hover {
+  font-weight: bold;
+  color: #fca601;
+  text-decoration: none;
+  transition: 0.15s ease-in-out all 0s;
+}
+/*navbar styling*/
+
+/* view connections styling */
+a.dogs {
+  float: left;
+  font-size: 10px;
+  line-height: 30px;
+}
+.study-wrapper ul li:last-child {
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 1s;
+  animation-iteration-count: 5;
+}
+/* @-webkit-keyframes example {
+  from {border: 10px solid #fca601;}
+  to {border: 10px solid #2b99b6;}
+} */
+
+/* Standard syntax */
+@keyframes example {
+  from {border: 5px solid #fca601;}
+  to {border: 5px solid #2b99b6;}
+}
+.view-connection-link {
+  box-shadow: 0 0 10px 1px #333;
+	position: absolute;
+	right: 0px;
+	top: 50px;
+	width: 100%;
+	z-index: 1;
+} 
+.card-link {
+	text-align: center;
+	border-top: 1px solid #ccc;
+	width: 100%;
+	display: inline-block;
+	margin-top: 20px;
+	padding: 6px 0 0 0;
+	font-weight: bold;
+}
+/* view connections styling end*/
+
+/* body content styling*/
+.body-content-wrapper {
+  padding: 70px 0 150px 0;
+}
+.study-wrapper li {
+  list-style: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 #999;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+.study-wrapper ul {
+  padding: 0;
+  margin: 0;
+}
+.connection-table-wrapper .display-4 {
+	text-transform: uppercase;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+	padding: 0 0 20px 0;
+  text-align: right;
+}
+figure {
+  position: fixed;
+  top: -500px;
+}
+.comspot {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	background: #333;
+	color: #fff;
+	border-radius: 50%;
+	right: 5px;
+	bottom: 3px;
+	line-height: 22px;
+	box-shadow: 0 0 5px 0px #333;
+}
+.alert.alert-dark.fix {
+	position: fixed;
+	bottom: 40px;
+	left: 0;
+}
+.fas.fa-music {
+	margin: 0 10px 0 0;
+}
+.comspot span {
+	position: absolute;
+	width: 200px;
+	display: inline-block;
+	top: -66px;
+	right: 0px;
+	font-size: 10px;
+	background: #4f4f4f;
+	border-radius: 5px;
+	transition: 0.15s ease-in-out 0s all;
+	opacity: 0;
+	padding: 5px;
+}
+.alert {
+  text-align: center;
+}
+.errer {
+	border: 2px solid #ff0000;
+	box-shadow: 0 0 4px 0px #ff0000;
+}
+.comspot:hover span {
+  opacity: 1;
+  transition: 0.15s ease-in-out 0s all;
+}
+.bottomfix {
+	position: fixed;
+	z-index: 1;
+	box-shadow: 0 0 10px 1px #333;
+	text-align: center;
+	left: calc(50% - 270px);
+	top: 27px;
+}
+.study-wrapper small {
+	position: absolute;
+	top: -25px;
+	background: #afafaf;
+	left: 3px;
+	width: 50%;
+	padding: 5px;
+	border-radius: 3px 3px 0 0;
+	font-style: italic;
+	font-size: 10px;
+}
+.connections {
+  background-image: url('https://jwguanacastegolf.com/image/65450-full_1920x1080-moon-space-minimal-1080p-laptop-full-hd-wallpaper.jpg');
+  background-size: 100% auto;
+}
+.connection {
+  background-image: url('https://www.lefthudson.com/wp-content/uploads/2019/11/minimalist-mountain-wallpaper-hd-luxury-artistic-horizon-mountain-purple-tree-minimalism-hd-artist-4k-wallpapers-backgrounds-this-month-of-minimalist-mountain-wallpaper-hd.jpg');
+  background-size: 100% auto;
+}
+.saved-con {
+  background-image: url('https://wallpaperaccess.com/full/522408.png');
+  background-size: 100% auto;
+}
+.signup, .login {
+  background-image: url('https://free4kwallpapers.com/uploads/originals/2015/10/27/minimalist--wallpaper.jpg');
+  background-size: 100% auto;
+}
+.index {
+  background-image: url('https://jwguanacastegolf.com/image/65450-full_1920x1080-moon-space-minimal-1080p-laptop-full-hd-wallpaper.jpg');
+  background-size: 100% auto;
+}
+.newcon {
+  background-image: url('https://jwguanacastegolf.com/image/65450-full_1920x1080-moon-space-minimal-1080p-laptop-full-hd-wallpaper.jpg');
+  background-size: 100% auto;
+}
+.study-wrapper li {
+	position: relative;
+  list-style: none;
+  background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px 0 #000;
+	padding: 10px;
+	margin: 30px;
+	float: left;
+	width: 40%;
+	height: 170px;
+  border: 3px solid #858585;
+}
+.fas.fa-edit {
+	position: absolute;
+	right: -30px;
+	top: 10px;
+	color: chartreuse;
+	text-shadow: 0 1px 0px #333;
+	cursor: pointer;
+	border: none;
+	background: none;
+	padding: 0;
+	font-size: 20px;
+	background: #707070;
+	border-bottom: none;
+	border-radius: 0px 5px 5px 0px;
+	box-shadow: 3px 0px 3px 0px #000;
+	width: 30px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+}
+.fas.fa-trash-alt {
+	position: absolute;
+	right: -30px;
+	top: 60px;
+	color: burlywood;
+	text-shadow: 0 1px 0px #333;
+	cursor: pointer;
+	border: none;
+	background: none;
+	padding: 0;
+	font-size: 20px;
+	background: #707070;
+	border-bottom: none;
+	border-radius: 0px 5px 5px 0px;
+	box-shadow: 3px 0px 3px 0px #000;
+	width: 30px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+}
+.fas.fa-edit:hover {
+  text-decoration: none;
+  background: green;
+  color: #fff;
+}
+.fas.fa-trash-alt:hover {
+  text-decoration: none;
+  background: #ff0000;
+  color: #fff;
+}
+.classtext {
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	top: 180px;
+	left: 0;
+	font-size: 18px;
+}
+.classtext a {
+  color: #fff;
+}
+.classtext {
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	top: 180px;
+	left: 0;
+	font-size: 18px;
+}
+.classtext a {
+  color: #fff;
+}
+/* body content styling end */
+
+/*footer styling*/
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #333;
+  padding: 10px 10px;
+}
+.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer ul li {
+  display: inline-block;
+  margin: 0 15px;
+  color: #fff;
+}
+.footer ul li a {
+  color: #fff;
+}
+.footer ul li a i {
+  font-size: 18px;
+}
+.fb-handle {
+  margin: 0 20px;
+}
+/*footer styling end*/
+
+/* connections.html styling */
+.study-catg-listing,
+.sports-catg-listing {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.study-catg-listing li,
+.sports-catg-listing li {
+  display: inline-block;
+  margin-bottom: 10px;
+  box-shadow: 0 0 3px 0 #ccc;
+}
+.study-wrapper h1, .sports-wrapper h1 {
+	margin-bottom: 25px;
+	text-transform: uppercase;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+.study-wrapper,
+.sports-wrapper {
+  margin-bottom: 25px;
+}
+/* connections.html styling end */
+
+/* connection page styling */
+.host-wrapper {
+  box-shadow: 0 0 10px 1px #333;
+	border-radius: 8px;
+	border: 2px solid #333;
+  padding: 0 10px; 
+  background: #fff;
+}
+.connection-table-wrapper .display-4 {
+	text-transform: uppercase;
+	color: #fff;
+}
+.host-description-wrapper {
+  padding: 10px;
+	box-shadow: 0 0 10px 1px #333;
+	border-radius: 8px;
+	border: 2px solid #333;
+  background: #fff;
+}
+.media img {
+	width: 120px;
+	height: 125px;
+	float: left;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 0 5px 0px #ccc;
+	border: 4px solid #999;
+}
+.display-4 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.host-description-wrapper .display-4 {
+	font-size: 30px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+	padding: 0 0 10px 0;
+}
+.body-content-wrapper.connection-engine {
+  margin-top: 20px;
+}
+.table {
+	margin: 0;
+}
+.table th, .table td {
+	line-height: 30px;
+	border: 5px solid #fff;
+}
+.btn-group {
+	width: 80%;
+}
+.action-btn-wrapper .btn {
+	border: 3px solid #333;
+}
+/* connection page styling end */
+
+/*saved connections styling */
+.saved-connections .navigation-engine ul li:nth-child(3) {
+  width: 120px;
+  text-align: center;
+}
+.view-connections .welcome-wrapper {
+  float: left;
+  color: #ffffff;
+  font-weight: bold;
+  font-style: italic;
+}
+.user-img-desc-wrapper img {
+  width: 25px;
+  height: 25px;
+}
+.card {
+  width: 18rem;
+}
+/*saved connections styling end */
+
+/*MEDIA QUERY*/
+@media (min-width: 200px) and (max-width: 480px) {
+  .navigation-engine ul {
+    margin: 0;
+    padding: 0;
+  }
+  .navigation-engine {
+    float: right;
+    width: 100%;
+    line-height: 31px;
+    text-align: right;
+  }
+  .navbar.navbar-dark.bg-dark.sticky-top {
+    height: auto;
+  }
+  .view-connection-link {
+    position: fixed;
+    right: 10px;
+    top: calc(100% - 150px);
+    width: auto;
+    z-index: 1;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  .view-connections {
+    text-align: center;
+  }
+  a.dogs {
+    float: none;
+    font-size: 10px;
+    line-height: 30px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    color: #fca601;
+    border-top: 1px solid #fff;
+    margin-top: 10px;
+  }
+  .view-connections {
+    padding: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+  }
+  .study-wrapper li {
+    width: 90%;
+    margin: 25px 0;
+  }
+  .navbar.navbar-dark.bg-dark.sticky-top {
+    height: auto;
+  }
+  .study-wrapper ul, .study-wrapper, .sports-wrapper {
+    height: auto;
+    overflow: auto;
+  }
+  .study-wrapper ul {
+    padding: 30px 0;
+  }
+  .comspot span {
+    width: 200px;
+    top: -60px;
+    padding: 1px;
+  }
+  .view-connections h6 {
+    margin: 0;
+    height: auto;
+    overflow: auto;
+  }
+  
+  .navbar.navbar-dark.bg-dark.sticky-top {
+    height: auto !important;
+  }
+  .navigation-engine ul li {
+    width: 100% !important;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  .register-form label {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .navigation-engine ul {
+    margin: 0;
+    padding: 0;
+  }
+  .navigation-engine {
+    float: right;
+    width: 100%;
+    line-height: 31px;
+    text-align: right;
+  }
+  .navbar.navbar-dark.bg-dark.sticky-top {
+    height: auto;
+  }
+  .view-connection-link {
+    position: fixed;
+    right: 10px;
+    top: calc(100% - 150px);
+    width: auto;
+    z-index: 1;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  .view-connections {
+    text-align: center;
+  }
+  a.dogs {
+    float: none;
+    font-size: 10px;
+    line-height: 30px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    color: #fca601;
+    border-top: 1px solid #fff;
+    margin-top: 10px;
+  }
+  .view-connections {
+    padding: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+  }
+  .study-wrapper li {
+    width: 90%;
+    margin: 25px 0;
+  }
+  .navbar.navbar-dark.bg-dark.sticky-top {
+    height: auto;
+  }
+  .study-wrapper ul, .study-wrapper, .sports-wrapper {
+    height: auto;
+    overflow: auto;
+  }
+  .study-wrapper ul {
+    padding: 30px 0;
+  }
+  .comspot span {
+    width: 200px;
+    top: -60px;
+    padding: 1px;
+  }
+  .view-connections h6 {
+    margin: 0;
+    height: auto;
+    overflow: auto;
+  }
+  
+  .navbar.navbar-dark.bg-dark.sticky-top {
+    height: auto !important;
+  }
+  .navigation-engine ul li {
+    width: 100% !important;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  .register-form label {
+    font-size: 14px;
+  }
+}
+/*MEDIA QUERY end*/
+
+/* tutorial */
+.tutorial {
+  z-index: 999;
+	position: fixed;
+	left: 0;
+	top: 160px;
+	height: 70px;
+	width: 50px;
+	line-height: 40px;
+	background: #fff;
+	text-align: center;
+	font-size: 30px;
+	box-shadow: 0 0 10px 1px #333;
+	border-radius: 0 5px 5px 0px;
+	cursor: pointer;
+	border: 4px solid #6f6f6f;
+}
+.tutorial i {
+	transform: rotate(90deg);
+	margin-top: 16px;
+}
+.tutorial-1 i {
+	position: absolute;
+	font-size: 20px;
+	color: #333;
+	left: -23px;
+	top: 0px;
+  text-shadow: 0 1px 1px #333;
+}
+.tutorial-2 i {
+	position: absolute;
+	font-size: 20px;
+	color: #333;
+	right: 90px;
+	top: -22px;
+	text-shadow: 0 1px 1px #333;
+	transform: rotate(90deg);
+	color: #fff;
+}
+.tutorial-3 i {
+	position: absolute;
+	font-size: 20px;
+	color: #333;
+	right: 115px;
+	top: -22px;
+	text-shadow: 0 1px 1px #333;
+	transform: rotate(90deg);
+	color: #fff;
+}
+.tutorial-4 i {
+	position: absolute;
+	font-size: 20px;
+	color: #333;
+	right: -21px;
+	top: 23px;
+	text-shadow: 0 1px 1px #333;
+	transform: rotate(180deg);
+	color: #fff;
+}
+.tutorial-1 {
+	border: 2px solid #ea4335;
+  position: absolute;
+  color: #fff;
+	background: #636363;
+	padding: 4px;
+	font-size: 13px;
+	border-radius: 4px;
+	box-shadow: 0 0 5px 1px #333;
+	width: 210px;
+	right: -236px;
+	top: 10px;
+}
+.tutorial-2 {
+	border: 2px solid #ea4335;
+	position: absolute;
+	color: #fff;
+	background: #636363;
+	padding: 4px;
+	font-size: 13px;
+	border-radius: 4px;
+	box-shadow: 0 0 5px 1px #333;
+	width: 210px;
+	right: 5px;
+	bottom: -80px;
+	text-align: center;
+}
+.tutorial-3 {
+	border: 2px solid #ea4335;
+	position: absolute;
+	color: #fff;
+	background: #636363;
+	padding: 4px;
+	font-size: 13px;
+	border-radius: 4px;
+	box-shadow: 0 0 25px 20px #333;
+	width: 100%;
+	right: 5px;
+	bottom: -90px;
+	text-align: center;
+	z-index: 1;
+}
+.tutorial-4 {
+	border: 2px solid #ea4335;
+	position: absolute;
+	color: #fff;
+	background: #636363;
+	padding: 4px;
+	font-size: 13px;
+	border-radius: 4px;
+	box-shadow: 0 0 25px 20px #333;
+	width: 100%;
+	right: 25px;
+	bottom: 80px;
+	text-align: center;
+	z-index: 1;
+}
+.tut-text {
+	text-align: center;
+	width: 90px;
+	font-size: 12px;
+	color: #fff;
+	display: inline-block;
+	background: #939393;
+	padding: 0px;
+	border: 2px solid #333;
+	z-index: 10;
+	border-radius: 10px;
+	font-weight: bold;
+	height: 30px;
+  line-height: 30px;
+  opacity: 0;
+  transition: 0.15s ease-in-out 0s all;
+  position: absolute;
+top: 70px;
+left: 0;
+}
+.tutorial:hover .tut-text {
+  opacity: 1;
+  transition: 0.15s ease-in-out 0s all;
+}
+.tutorial-link .connections-link {
+	border: 5px solid #ea4335;
+	padding: 5px;
+	padding: 3px 5px;
+	border-radius: 5px;
+}
+.tutorial-btn {
+	position: relative;
+	border: 5px solid #ea4335;
+	display: inline-block;
+	border-radius: 10px;
+}
+#next, #exit {
+	width: 100%;
+	border: 1px solid #fff;
+	margin: 5px 0 0 0;
+}
+.tutorial-ul li:first-child {
+  border: 5px solid #ea4335;
+  position: relative;
+}
+.tutorial-edit .fa-edit, .tutorial-edit .fa-trash-alt {
+  border: 5px solid #ea4335;
+}
+.tutorial.stop {
+	pointer-events: none;
+}
+.rsvp-preferance-wrapper {
+	position: relative;
+}
+.tutorial-5 {
+	border: 2px solid #ea4335;
+	position: absolute;
+	color: #fff;
+	background: #636363;
+	padding: 4px;
+	font-size: 13px;
+	border-radius: 4px;
+	box-shadow: 0 0 10px 0px #333;
+	width: 130px;
+	left: -160px;
+	top: 60px;
+	text-align: center;
+	z-index: 1;
+}
+.card-body {
+	padding: 0 10px;
+}
+.tutorial-5 i {
+	position: absolute;
+	font-size: 20px;
+	color: #333;
+	right: -21px;
+	top: 23px;
+	text-shadow: 0 1px 1px #333;
+	transform: rotate(180deg);
+	color: #fff;
+}
+/* tutorial end */

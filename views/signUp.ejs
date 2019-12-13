@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<head>
+    <title>Home Page</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <!-- Fonts CDN -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" />
+
+    <!-- local css files -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/master.css" />
+</head>
+
+<body class="signup">
+    <% include partials/newHeader.ejs %> <% include partials/loginNav.ejs %>
+
+    <!-- Main body component -->
+    <main class="body-content-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <div class="jumbotronn">
+                        <form method="POST" action="/signUp" class="register-form">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input name="firstName" type="text" class="form-control" id="fname"
+                                    aria-describedby="emailHelp" placeholder="First Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input name="lastName" type="text" class="form-control" id="lname"
+                                    aria-describedby="emailHelp" placeholder="Last Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input name="password" type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block">
+                                Register User
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <%if(failText != ''){%>
+                    <div class="alert alert-danger" role="alert">
+                        <%=failText%>
+                    </div>
+                    <script>
+                        let f1 = document.querySelectorAll('.form-control');
+                        let button = document.querySelector('button');
+                        let body = document.querySelector('body');
+                        let form = document.querySelector('.register-form')
+                        form.classList.add('error');
+                        body.classList.add('bodyerror');
+                        console.log(button.classList)
+                        button.classList.add('btn-danger');
+                        button.classList.remove('btn-success');
+                        console.log(f1)
+                        for (val in f1) {
+                            f1[val].classList.add('error')
+                        }
+                    </script>
+                    <%}%>
+                    <%if(successText != ''){%>
+                    <div class="alert alert-success" role="alert">
+                        <%=successText%>
+                    </div>
+                    <script>
+                        let f1 = document.querySelectorAll('.form-control');
+                        let button = document.querySelector('button');
+                        let body = document.querySelector('body');
+                        let form = document.querySelector('.register-form')
+                        form.classList.remove('error');
+                        body.classList.remove('bodyerror');
+                        console.log(button.classList)
+                        button.classList.remove('btn-danger');
+                        button.classList.add('btn-success');
+                        console.log(f1)
+                        for (val in f1) {
+                            f1[val].classList.remove('error')
+                        }
+                    </script>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main body component end -->
+
+    <% include partials/footer.ejs %>
+</body>
+
+</html>

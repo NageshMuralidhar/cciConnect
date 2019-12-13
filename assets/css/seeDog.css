@@ -1,0 +1,552 @@
+
+.corgiblock {
+    background: #e1e1e1;
+    height: 100vh;
+}
+.wrap {
+    padding: 50vh 0 0 0;
+}
+    
+    .fuwa {
+    animation:fuwa 1s infinite linear alternate;
+    }
+    
+    @keyframes fuwa {
+    0% {transform:translate(0, 0) rotate(-0deg);}
+    50% {transform:translate(0, -2px) rotate(0deg);}
+    100% {transform:translate(0, 0)rotate(0deg);}
+    }
+    
+    .resize{
+      width:200px;
+      overflow:hidden;
+      resize:horizontal;
+      display:flex;
+      justify-content:space-between;
+      margin: 0 auto;
+      min-width:160px;
+    }
+    
+    .brown{
+       background:#E89C18}
+    
+    .white{
+       background:#fff;}
+    
+    .corgi_wrap{
+      display:flex;
+      justify-content:space-between;
+    height:172px;
+    margin:0 auto;
+    position:relative;
+        overflow:hidden;
+      resize: horizontal;}
+    
+    .corgi_head_area{height:172px;
+    position:relative;
+      width:108px;}
+    
+    .corgi_face{
+      position:relative;
+       width:88px;
+      height:72px;
+      border-radius:48px 55px 40px 40px;
+      margin:40px 0 0 12px;}
+    
+    .corgi_face::before{
+      content:"";
+      display:block;
+      background:#E89C18;
+      width:48px;
+      height:40px;
+      position:absolute;
+      right:0;
+      border-radius:0 40px 0px 16px;
+    z-index:1;}
+    
+    .corgi_face::after{
+       content:"";
+      display:block;
+      background:#E89C18;
+      width:32px;
+      height:32px;
+      position:absolute;
+      left:0;
+      border-radius:32px 0px 32px 0px;
+      z-index:0;}
+    
+    .corgi_nose{
+      position:absolute;
+      left:-8px;
+      top:32px;
+      width:56px;
+    height:40px;
+    border-radius:16px 16px 0 24px;
+    z-index:1;}
+    
+    .nose{
+      background:#222222;
+        width:32px;
+    height:14px;
+    border-radius:8px;
+    margin-left:-4px;}
+    
+    .eye-left{
+      position:absolute;
+      right:32px;
+      top:24px;
+      background:#222222;
+      width:8px;
+    height:8px;
+    border-radius:50%;
+      z-index:2;
+    } 
+    .eye-right{
+      position:absolute;
+      left:14px;
+      top:24px;
+      background:#222222;
+      width:8px;
+    height:8px;
+    border-radius:50%;
+      z-index:2;} 
+    
+    .ear-right{
+      position:absolute;
+      background:#DA9217;
+      top:-32px;
+      left:-10px;
+       width:40px;
+      height:64px;
+      z-index:-999;
+      transform:rotate(-20deg);
+      border-radius:80% 20% 0px 0px;
+      animation: pataright 1s ease-in-out infinite alternate;}
+    
+    @keyframes pataright{
+    0% {transform:translate(1px, 0) rotate(-20deg);}
+    50% {transform:translate(0, -1px) rotate(-17deg);}
+    100% {transform:translate(1px, 0)rotate(-20deg);}
+    }
+    
+    .ear-left{
+      position:absolute;
+      top:-32px;
+      right:-10px;
+       width:40px;
+      height:64px;
+      z-index:-999;
+      transform:rotate(20deg);
+      border-radius:20% 80% 0px 0px;
+      animation: pataleft 1s ease-in-out infinite alternate;}
+    
+    @keyframes pataleft {
+    0% {transform:translate(2px, 0) rotate(20deg);}
+    50% {transform:translate(0, -2px) rotate(17deg);}
+    100% {transform:translate(2px, 0)rotate(20deg);}
+    }
+    
+    .corgi_breast{
+      position:absolute;
+      top:80px;
+      right:0px;
+       width:80px;
+      height:80px;
+      border-radius:0 0 0 40px;
+    }
+    
+    .corgi_breast::before{
+      content:"";
+      display:block;
+    background:#ffffff;
+      height:72px;
+      width:16px;
+      border-radius:50%;
+      position:absolute;
+      top:0;
+      left:4px;}
+    
+    .corgi_breast::after{
+      content:"";
+      display:block;
+    background:#fff;
+      height:64px;
+      width:16px;
+      border-radius:0 0 25% 50%;
+      position:absolute;
+      top:0;
+      left:-4px;}
+    
+    .leg_fr_left{
+       width:16px;
+      height:32px;
+      position:absolute;
+      bottom:0;
+      right:0;
+      border-radius:4px;}
+    
+    .leg_fr_left::after{
+      content:"";
+      background:#fff;
+      display:block;  
+      width:16px;
+      height:8px;
+      border-radius:0 0 4px 4px;
+      position:absolute;
+      bottom:0;
+      left:0px;}
+    
+    .leg_fr_right{
+       width:16px;
+      height:32px;
+      position:absolute;
+      bottom:0;
+      right:22px;
+      border-radius:4px;}
+    
+    .leg_fr_right::after{
+      content:"";
+      background:#fff;
+      display:block;  
+      width:16px;
+      position:absolute;
+      height:8px;
+      border-radius:0 0 4px 4px;
+      bottom:0;
+      left:0px;}
+    
+    .corgi_body_area{
+       flex:auto;}
+    
+    .corgi_body{
+      height:80px;  
+      width:100%;
+      margin-top:80px;}
+    
+    .corgi_tail_area{
+        width:56px;}
+    
+    .corgi_hip{
+       width:48px;
+      height:80px;
+      position:relative;
+      top:80px;
+      border-radius:0 40px 16px 0;}
+    
+    .corgi_hip::after{
+       content:"";
+      display:block;
+      background:#E89C18;
+      width:32px;
+      height:32px;
+      border-radius:50%;
+      position:absolute;
+      top:-4px;
+      right:-4px;
+    animation:furu .5s infinite linear alternate;
+    }
+    
+    @keyframes furu {
+    0% {transform:translate(2px, 0) rotate(-5deg);}
+    50% {transform:translate(0, -2px) rotate(0deg);}
+    100% {transform:translate(2px, 0)rotate(5deg);}
+    }
+    
+    .leg_ba_left{
+       width:16px;
+      height:32px;
+      position:absolute;
+      bottom:-12px;
+      right:0;
+      border-radius:4px;;}
+    
+    .leg_ba_left::after{
+      content:"";
+      background:#fff;
+      display:block;  
+      width:16px;
+      height:8px;
+      border-radius:0 0 4px 4px;
+      position:absolute;
+      bottom:0;
+      left:0px;}
+    
+    .leg_ba_right{
+       width:16px;
+      height:32px;
+      position:absolute;
+      bottom:-12px;
+      left:0px;
+      border-radius:4px;}
+    
+    .leg_ba_right::after{
+      content:"";
+      background:#fff;
+      display:block;  
+      width:16px;
+      height:8px;
+      border-radius:0 0 4px 4px;
+      position:absolute;
+      bottom:0;
+      left:0px;}
+    
+    .note{text-align:center;
+      margin:40px 0;
+    font-size:10px;
+    color:#333333;
+    letter-spacing:0.15rem;}
+
+    /* small dog */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body,
+    html {
+        width: 100%;
+        height: 100%;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .dog {
+        width: 160px;
+        height: 186px;
+        position: relative;
+    }
+    @keyframes head {
+        0% {
+            transform: rotate(0deg);
+        }
+        30% {
+            transform: rotate(0deg);
+        }
+        40% {
+            transform: rotate(-20deg);
+        }
+        80% {
+            transform: rotate(-20deg);
+        }
+        90% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    .dog-head {
+        width: 100px;
+      height: 90px;
+      position: absolute;
+        z-index: 5;
+      top: 30px;
+      left: calc(50% - 50px);
+      background-color: #efc092;
+      border-radius: 50%;
+        animation: head 6s linear infinite;
+    }
+    .dog-head:before,
+    .dog-head:after {
+      content: "";
+      width: 79px;
+      height: 50px;
+      position: absolute;
+      z-index: 5;
+      top: 44px;
+      background-color: #efc092;
+      border-radius: 50%;
+    }
+    .dog-head:before {
+      left: -7px;
+      transform: rotate(50deg);
+    }
+    .dog-head:after {
+      right: -7px;
+      transform: rotate(-49deg);
+    }
+    .dog-mouth {
+        width: 60px;
+      height: 35px;
+      background-color: #fee2d2;
+      position: absolute;
+      bottom: -15px;
+      left: 20px;
+      z-index: 10;
+      border-radius: 50%;
+    }
+    .dog-mouth:after {
+        content: "";
+        width: 10px;
+      height: 40px;
+      background-color: #fee2d2;
+      position: absolute;
+      bottom: 30px;
+      left: 24px;
+      z-index: 10;
+      border-radius: 20px;
+    }
+    .dog-nose {
+        width: 16px;
+        height: 10px;
+        position: absolute;
+        top: 8px;
+        left: calc(50% - 8px);
+        background-color: #000;
+        border-radius: 50%;
+    }
+    @keyframes tongue {
+        0% {
+            height: 10px;
+        }
+        30% {
+            height: 10px;
+        }
+        40% {
+            height: 20px;
+        }
+        60% {
+            height: 10px;
+        }
+        80% {
+            height: 20px;
+        }
+        90% {
+            height: 10px;
+        }
+        100% {
+            height: 10px;
+        }
+    }
+    .dog-tongue {
+      width: 20px;
+      height: 10px;
+      position: absolute;
+      top: 24px;
+      left: calc(50% - 10px);
+      background-color: #f4a4ad;
+      border-radius: 0 0 10px 10px;
+        animation: tongue 4s linear infinite;
+    }
+    .dog-eyes {
+        width: 10px;
+      height: 16px;
+      background-color: #000;
+      position: absolute;
+      top: 52px;
+      left: 28px;
+      border-radius: 50%;
+      z-index: 10;
+      box-shadow: 33px 0px 0px #000;
+    }
+    .dog-eyes:after {
+      content: "";
+      width: 92px;
+      height: 50px;
+      position: absolute;
+      top: -50px;
+      left: -24px;
+      background-color: #efc092;
+      border-radius: 50%;
+    }
+    .dog-ears {
+      width: 80px;
+        height: 50px;
+        position: absolute;
+        z-index: 0;
+        top: -2px;
+        border-radius: 150px 0 150px 0;
+        background-color: #efc092;
+    }
+    .dog-ears:after {
+        content: "";
+      width: 50px;
+        height: 30px;
+        position: absolute;
+        z-index: 0;
+        top: 8px;
+        left: 20px;
+        border-radius: 150px 0 150px 0;
+        transform: rotate(-176deg);
+        background-color: #fee2d2;
+    }
+    .ears-left {
+        left: -22px;
+        transform: rotate(-105deg);
+    }
+    .ears-right {
+        right: -22px;
+        transform: rotate(-22deg);
+    }
+    .dog-body {
+      width: 54px;
+      height: 60px;
+      position: absolute;
+      top: 120px;
+      left: calc(50% - 35px);
+      background-color: #d58b4e;
+      border-radius: 49px 0 0 20px;
+    }
+    .dog-body:before {
+      content: "";
+      width: 50px;
+      height: 60px;
+      position: absolute;
+      top: 3px;
+      left: calc(50% - 17px);
+      background-color: #efbf8e;
+      border-radius: 100px 100px 0 0;
+    }
+    .dog-body:after {
+      content: "";
+      width: 15px;
+      height: 30px;
+      position: absolute;
+      top: 32px;
+      left: 28px;
+      background-color: #d58b4e;
+      border-radius: 100px 100px 0 0;
+    }
+    .dog-foot {
+        width: 20px;
+      height: 13px;
+      position: absolute;
+      z-index: 5;
+      bottom: -3px;
+      left: 8px;
+      background-color: #fce2d3;
+      border-radius: 10px 10px 0 0;
+        box-shadow: 33px 0 0 #fce2d3;
+    }
+    @keyframes tail {
+        0% {
+          transform: rotate(-47deg);
+        }
+        100% {
+          transform: rotate(-57deg);
+        }
+    }
+    .dog-tail {
+        width: 10px;
+      height: 50px;
+      position: absolute;
+      top: 120px;
+      left: calc(50% - 45px);
+      background-color: #ecc093;
+      transform: rotate(-47deg);
+      border-radius: 10px 0 0 0px / 50px 0 0 0px;
+        animation: tail .08s infinite alternate;
+    }
+    .ball {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+        border-radius: 50%;
+        background-color: #6E64F0;
+    }

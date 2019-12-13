@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<head>
+  <title>Home Page</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <!-- Fonts CDN -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <!-- local css files -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/master.css" />
+</head>
+
+<body class="saved-con">
+  <% include partials/signedInNav.ejs %> <% include partials/nav.ejs %>
+  <figure>
+    <figcaption>Listen to the T-Rex:</figcaption>
+    <audio controls autoplay>
+      <source src="../assets/man.mp3" type="audio/mpeg">
+      <source src="../assets/mus.mp3" type="audio/mpeg">
+    </audio>
+  </figure>
+  <!-- Main body component -->
+  <main class="body-content-wrapper connection-engine">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="connection-table-wrapper">
+            <h1 class="display-4">
+              <%= username %> Connections
+            </h1>
+            <div class="table-wrapper table-responsive table-bordered table-primary">
+              <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Connection</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Going?</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <%for(let i=0; i<savedConnection.length; i++){%>
+                  <tr>
+                    <th scope="row">
+                      <%=savedConnection[i].cName%>
+                    </th>
+                    <td><%=savedConnection[i].cTitle%></td>
+                    <td><%=savedConnection[i].rsvp%></td>
+                    <td>
+                      <div class="action-btn-wrapper">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <a href="connection.ejs?cciconnection=<%=savedConnection[i].cID%>"
+                            class="btn btn-light">Update</a>
+                          <a href="savedConnections.ejs?deletable_id=<%=savedConnection[i].cID%>&&delete_rsvp=<%=savedConnection[i].rsvp%>"
+                            class="btn btn-secondary">Delete</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <%}%>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="alert alert-dark fix" role="alert">
+      <i class="fas fa-music fa-spin"></i>
+       Enjoy some music, while you are at it!
+       <i class="fas fa-cog fa-spin"></i>
+    </div>
+  <!-- Main body component end -->
+
+  <% include partials/footer.ejs %>
+</body>
+
+</html>
+<script>
+  window.setTimeout(function () {
+    $('.fix').addClass('hide');
+  }, 6000)
+</script>

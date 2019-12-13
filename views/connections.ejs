@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<head>
+  <title>Home Page</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <!-- Fonts CDN -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <!-- local css files -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/master.css" />
+</head>
+
+<body class="connections">
+  <% include partials/signedInNav.ejs %> <% include partials/nav.ejs %>
+  <span class="tutorial">
+    <i class="fas fa-gamepad"></i>
+    <span class="tut-text">
+      TUTORIAL
+    </span>
+  </span>
+  <!-- Main body component -->
+  <main class="body-content-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-xs-12">
+          <div class="connetions-category">
+            <div class="study-wrapper">
+              <ul>
+                <% for(let i=0; i<connections.length; i++) {%>
+                <li>
+                  <%if(author[0].email == connections[i].user_sync){%>
+                  <a href="newConnection.ejs?editCon=<%=connections[i].cID%>" class="fas fa-edit"></a>
+                  <a href="connections.ejs?deleteCon=<%=connections[i].cID%>" class="fas fa-trash-alt"></a>
+                  <span class="comspot">
+                    <i class="fas fa-unlock"></i>
+                    <span>This card is unlocked and can be edited or deleted since you are the author.</span>
+                  </span>
+                  <%}else {%>
+                  <span class="comspot">
+                    <i class="fas fa-lock"></i>
+                    <span>This card is locked and cannot be edited or deleted since you are not the author.</span>
+                  </span>
+                  <%}%>
+                  <h1 class="display-4">
+                    <%=connections[i].cTitle %>
+                  </h1>
+                  <div>
+                    <%=connections[i].cName %>
+                  </div>
+                  <a href="connection.ejs?cciconnection=<%=connections[i].cID %>" class="card-link">Card link</a>
+                  <small>Author: <%=connections[i].user_sync %></small>
+                </li>
+                <%}%>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+  <%if(empty!=''){%>
+                <div class="classtext"><a href="<%= empty %>">Connection empty, Click here to create new
+                    connections.</a></div>
+                <%}%>>
+                <!-- Main body component end -->
+
+                <% include partials/footer.ejs %>
+</body>
+
+</html>
+<script>
+  $('.tutorial').on('click', function () {
+    $('.tutorial').addClass('stop')
+    $('.study-wrapper ul').addClass('tutorial-ul')
+    $('.study-wrapper ul li:first-child').append('<span class = "tutorial-3"><i class="far fa-hand-point-left"></i>Click here to view a single connection<button id="next" class="btn btn-sm btn-dark">Next</button></span>')
+    $('#next').on('click', function () {
+      $('.tutorial-3').remove()
+      $('.study-wrapper ul li:first-child').addClass('tutorial-edit');
+      $('.tutorial-edit').append('<span class = "tutorial-4"><i class="far fa-hand-point-left"></i>Click here to Edit/Delete a single connection<button id="exit" class="btn btn-sm btn-dark">exit</button></span>')
+      $('#exit').on('click', function () {
+        $('.tutorial-4').remove()
+        $('.study-wrapper ul').removeClass('tutorial-ul')
+        $('li').removeClass('tutorial-edit')
+        $('.tutorial').removeClass('stop')
+      })
+    })
+  })
+
+</script>
